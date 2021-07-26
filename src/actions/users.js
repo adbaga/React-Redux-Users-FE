@@ -26,10 +26,12 @@ import {
   export const retrieveUsers = () => async (dispatch) => {
     try {
       const res = await UserDataService.getAll();
+
+      console.log(res.data)
   
       dispatch({
         type: RETRIEVE_USERS,
-        payload: res.data,
+        payload: res.data.users,
       });
     } catch (err) {
       console.log(err);
