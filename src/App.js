@@ -1,5 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import Header from "./components/Header"
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 
@@ -10,6 +11,8 @@ import UsersList from "./components/UsersList";
 function App() {
   return (
     <Router>
+
+    
       <nav className="navbar navbar-expand navbar-dark bg-dark">
         <a href="/users" className="navbar-brand">
           Nacho!
@@ -26,7 +29,7 @@ function App() {
             </Link>
           </li>
         </div>
-      </nav>
+      </nav> 
 
       <div className="container mt-3">
         <Switch>

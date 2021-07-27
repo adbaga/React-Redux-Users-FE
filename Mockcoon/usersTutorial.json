@@ -200,6 +200,34 @@
                         ],
                         "enabled": true,
                         "randomResponse": false
+                    },
+                    {
+                        "uuid": "",
+                        "documentation": "",
+                        "method": "post",
+                        "endpoint": "users",
+                        "responses": [
+                            {
+                                "uuid": "",
+                                "body": "{\n  \"id\":\"{{body 'id'}}\",\n  \"userName\":\"{{body 'userName'}}\",\n  \"firstName\":\"{{body 'firstName'}}\",\n  \"lastName\":\"{{body 'lastName'}}\",\n  \n}",
+                                "latency": 0,
+                                "statusCode": 200,
+                                "label": "",
+                                "headers": [
+                                    {
+                                        "key": "",
+                                        "value": ""
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            }
+                        ],
+                        "enabled": true,
+                        "randomResponse": false
                     }
                 ],
                 "proxyMode": false,
