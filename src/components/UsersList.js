@@ -51,7 +51,7 @@ const UsersList = () => {
   };
 
   return (
-    <div className="list row">
+    <div data-testid="UsersList-1" className="list row">
       <div className="col-md-8">
         <div className="input-group mb-3">
           <input
