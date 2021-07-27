@@ -37,26 +37,6 @@ const User = (props) => {
     setCurrentUser({ ...currentUser, [name]: value });
   };
 
-  const updateStatus = status => {
-    const data = {
-      id: currentUser.id,
-      userName: currentUser.userName,
-      firstName: currentUser.firstName,
-      lastName: currentUser.lastName, 
-      email: currentUser.email,
-    };
-
-    dispatch(updateUser(currentUser.id, data))
-      .then(response => {
-        console.log(response);
-
-        setCurrentUser({ ...currentUser, published: status });
-        setMessage("The status was updated successfully!");
-      })
-      .catch(e => {
-        console.log(e);
-      });
-  };
 
   const updateContent = () => {
     dispatch(updateUser(currentUser.id, currentUser))
@@ -91,8 +71,8 @@ const User = (props) => {
             <input
               type="text"
               className="form-control"
-              id="title"
-              name="title"
+              id="userName"
+              name="userName"
               value={currentUser.userName}
               onChange={handleInputChange}
             />
@@ -110,7 +90,7 @@ const User = (props) => {
           </div>
 
           <div className="form-group">
-            <label htmlFor="lasstName">Last Name</label>
+            <label htmlFor="lastName">Last Name</label>
             <input
               type="text"
               className="form-control"
